@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="settingsPane" fx:id="settingPane" prefHeight="620.0" prefWidth="430.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Settings.SettingsController">
+    <children>
+        <Label layoutX="45.0" layoutY="30.0" style="-fx-background-color: WHITE;" text="VoYVoY" textFill="#838383">
+            <font>
+                <Font name="Book Antiqua Bold" size="21.0" />
+            </font>
+        </Label>
+        <Button id="changeProB" fx:id="changeProB" layoutX="44.0" layoutY="226.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="343.0" style="-fx-background-color: WHITE;" text="Profile" textFill="#727272">
+            <font>
+                <Font name="Book Antiqua" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="45.0" layoutY="60.0" prefHeight="14.0" prefWidth="95.0" style="-fx-background-color: WHITE;" text="Personal Messenger" textFill="#a8a8a8">
+            <font>
+                <Font name="Book Antiqua Italic" size="11.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="592.0" prefHeight="14.0" prefWidth="122.0" style="-fx-background-color: WHITE;" text="2019 All Rights Reserved" textFill="#a8a8a8">
+            <font>
+                <Font name="Book Antiqua Italic" size="11.0" />
+            </font>
+        </Label>
+        <Button id="delAccB" fx:id="delAccB" layoutX="44.0" layoutY="366.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="343.0" style="-fx-background-color: WHITE;" text="Delete Account" textFill="#727272">
+            <font>
+                <Font name="Book Antiqua" size="14.0" />
+            </font>
+        </Button>
+        <Button id="LogOutB" fx:id="LogOutB" layoutX="44.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="343.0" style="-fx-background-color: WHITE;" text="Log Out" textFill="#727272">
+            <font>
+                <Font name="Book Antiqua" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

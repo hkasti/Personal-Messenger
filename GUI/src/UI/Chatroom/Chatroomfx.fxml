@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="chatPane" fx:id="chatpane" prefHeight="620.0" prefWidth="430.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Chatroom.ChatroomController">
+    <children>
+        <Button id="proPicB" fx:id="proPicB" layoutX="17.0" layoutY="15.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: WHITESMOKE;" text="Photo" textFill="#8d8989" onAction="#OpenPro" >
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label id="name" fx:id="name" layoutX="85.0" layoutY="29.5" rotate="90.0" text="Name" textFill="#b2b2b2">
+            <font>
+                <Font name="Book Antiqua Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label id="status" fx:id="status" layoutX="19.0" layoutY="97.0" text="Status" textFill="#8d8d8d">
+            <font>
+                <Font name="Book Antiqua Italic" size="13.0" />
+            </font>
+        </Label>
+        <ScrollBar id="scroll" fx:id="scroll" layoutX="409.0" layoutY="453.0" orientation="VERTICAL" prefHeight="148.0" prefWidth="14.0" style="-fx-background-color: WHITESMOKE;" />
+        <TextArea id="textField" fx:id="textField" layoutX="34.0" layoutY="453.0" prefHeight="148.0" prefWidth="357.0" promptText="say something..." />
+    </children>
+</AnchorPane>
