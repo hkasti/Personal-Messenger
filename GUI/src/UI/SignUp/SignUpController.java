@@ -43,10 +43,12 @@ public class SignUpController {
     }
 
     public void setUser(){
-        userSignU.accessibleTextProperty().setValue(scanner.nextLine());
+        //userSignU.accessibleTextProperty().setValue(scanner.nextLine());
+        String username = userSignU.getText();
     }
     public void setPass(){
-        passSignU.accessibleTextProperty().setValue(scanner.nextLine());
+        //passSignU.accessibleTextProperty().setValue(scanner.nextLine());
+        String username = passSignU.getText();
 
     }
     public void GotoPass(){

@@ -3,9 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Chatroom/Chatroomfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Chatroom/Chatroomfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Profile/Profilefx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Profile/Profilefx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Search/Searchfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Search/Searchfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Settings/DelAccConroller.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Settings/DelAccController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Settings/DelAccController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Settings/LogOutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Settings/LogOutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Settings/LogOutfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Settings/LogOutfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Settings/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Settings/SettingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/Settings/Settingsfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/Settings/Settingsfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GUI/UI/SignUp/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUI/UI/SignUp/SignUpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Home/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Home/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Home/Homefx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Home/Homefx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Profile/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Profile/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Profile/Profilefx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Profile/Profilefx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Search/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Search/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Search/Searchfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Search/Searchfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Settings/DelAccConroller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Settings/DelAccfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Settings/DelAccController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Settings/DelAccController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Settings/LogOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Settings/LogOutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Settings/LogOutfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Settings/LogOutfx.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/Settings/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Settings/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/Settings/Settingsfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Settings/Settingsfx.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/SignUp/SignUpfx.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/SignUp/SignUpfx.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/SignUp/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/SignUp/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../project/project.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../project/project.exe" beforeDir="false" />
     </list>
@@ -65,61 +87,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="140">
+              <caret line="16" selection-start-line="16" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/SignUp/SignUpfx.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="36" column="108" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/UI/Settings/SettingsController.java">
+        <entry file="file://$PROJECT_DIR$/src/UI/Home/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+            <state relative-caret-position="718">
+              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI/Home/Homefx.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="39" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/SignUp/SignUpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="445">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-                <element signature="e#1576#1577#0" expanded="true" />
-                <element signature="e#1601#1602#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/Settings/Settingsfx.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="33" column="231" selection-start-line="33" selection-start-column="231" selection-end-line="33" selection-end-column="231" />
+            <state relative-caret-position="459">
+              <caret line="27" column="149" lean-forward="true" selection-start-line="27" selection-start-column="149" selection-end-line="27" selection-end-column="149" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI/Search/SearchController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="19" selection-start-line="19" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,23 +185,28 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Profile/Profilefx.fxml" />
         <option value="$PROJECT_DIR$/src/sample/SignUp/SignUpController.java" />
-        <option value="$PROJECT_DIR$/src/UI/Profile/Profilefx.fxml" />
-        <option value="$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml" />
-        <option value="$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java" />
-        <option value="$PROJECT_DIR$/src/UI/Search/SearchController.java" />
         <option value="$PROJECT_DIR$/src/UI/Search/Searchfx.fxml" />
         <option value="$PROJECT_DIR$/src/UI/Main.java" />
         <option value="$PROJECT_DIR$/src/UI/Home/Homefx.fxml" />
-        <option value="$PROJECT_DIR$/src/UI/Home/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/UI/SignUp/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/UI/SignUp/SignUpfx.fxml" />
+        <option value="$PROJECT_DIR$/src/UI/SignUp/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/UI/Settings/Settingsfx.fxml" />
+        <option value="$PROJECT_DIR$/src/UI/Settings/DelAccfx.fxml" />
+        <option value="$PROJECT_DIR$/src/UI/Settings/DelAccController.java" />
+        <option value="$PROJECT_DIR$/src/UI/Settings/LogOutController.java" />
+        <option value="$PROJECT_DIR$/src/UI/Settings/LogOutfx.fxml" />
         <option value="$PROJECT_DIR$/src/UI/Settings/SettingsController.java" />
+        <option value="$PROJECT_DIR$/src/UI/Search/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/UI/Profile/ProfileController.java" />
+        <option value="$PROJECT_DIR$/src/UI/Profile/Profilefx.fxml" />
+        <option value="$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java" />
+        <option value="$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml" />
+        <option value="$PROJECT_DIR$/src/UI/Home/HomeController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -220,6 +255,20 @@
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="Settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -238,7 +287,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563183076848" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563226540565" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
@@ -340,18 +389,19 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1563114453648" duration="5138000" />
       <workItem from="1563171795353" duration="1288000" />
-      <workItem from="1563174802388" duration="6799000" />
+      <workItem from="1563174802388" duration="12185000" />
+      <workItem from="1563203428305" duration="10237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14527000" />
+    <option name="totallyTimeSpent" value="30150000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.24963504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25036603" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -360,7 +410,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890856" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28171092" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30126184" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -401,116 +451,102 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/UI/Settings/LogOutController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
+    <entry file="file://$PROJECT_DIR$/.idea/ant.xml" />
+    <entry file="file://$PROJECT_DIR$/../VoYVoY/untitled2/src/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="-255">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Settings/LogOutfx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/UI/Settings/DelAccfx.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="243" selection-start-line="9" selection-start-column="243" selection-end-line="9" selection-end-column="243" />
+        <state relative-caret-position="85">
+          <caret line="11" column="188" selection-start-line="11" selection-start-column="188" selection-end-line="11" selection-end-column="188" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Settings/LogOutfx.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="190" selection-start-line="11" selection-start-column="190" selection-end-line="11" selection-end-column="190" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Controller_Stub.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/ControllerInterface.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/PersonDB.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#2817#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Settings/DelAccController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Settings/DelAccConroller.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="241" selection-start-line="9" selection-start-column="241" selection-end-line="9" selection-end-column="241" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Profile/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="31">
+          <caret line="22" column="22" selection-start-line="11" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Search/SearchController.java">
+    <entry file="file://$PROJECT_DIR$/src/UI/Settings/LogOutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Profile/Profilefx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/ant.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Home/Homefx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="22" column="114" selection-start-line="22" selection-start-column="114" selection-end-line="22" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="12" column="226" selection-start-line="12" selection-start-column="226" selection-end-line="12" selection-end-column="226" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Home/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="-139">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Settings/Settingsfx.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Search/Searchfx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        <state relative-caret-position="264">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="146">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -518,39 +554,99 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/SignUp/SignUpfx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="36" column="108" selection-start-line="36" selection-start-column="108" selection-end-line="36" selection-end-column="108" />
+        <state relative-caret-position="423">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/SignUp/SignUpController.java">
+    <entry file="file://$PROJECT_DIR$/src/UI/Profile/Profilefx.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="-793">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Profile/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="68" lean-forward="true" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Settings/Settingsfx.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/UI/Search/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="33" column="231" selection-start-line="33" selection-start-column="231" selection-end-line="33" selection-end-column="231" />
+        <state relative-caret-position="99">
+          <caret line="19" selection-start-line="19" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Settings/SettingsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        <state relative-caret-position="129">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/SignUp/SignUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Chatroom/Chatroomfx.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="149" lean-forward="true" selection-start-line="27" selection-start-column="149" selection-end-line="27" selection-end-column="149" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Home/Homefx.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Chatroom/ChatroomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="16" selection-start-line="16" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Home/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

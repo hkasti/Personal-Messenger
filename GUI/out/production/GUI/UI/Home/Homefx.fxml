@@ -25,5 +25,10 @@
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font>
       </Button>
+      <Button id="HchatB" fx:id="HchatB" layoutX="213.0" layoutY="301.0" mnemonicParsing="false" onAction="#OpenPro" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="ChatRoom" textFill="#727272">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

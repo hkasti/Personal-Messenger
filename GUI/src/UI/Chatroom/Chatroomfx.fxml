@@ -7,10 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="chatPane" fx:id="chatpane" prefHeight="620.0" prefWidth="430.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Chatroom.ChatroomController">
     <children>
-        <Button id="proPicB" fx:id="proPicB" layoutX="17.0" layoutY="15.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: WHITESMOKE;" text="Photo" textFill="#8d8989" onAction="#OpenPro" >
+        <Button id="proPicB" fx:id="proPicB" layoutX="17.0" layoutY="15.0" mnemonicParsing="false" onAction="#OpenPro" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: WHITESMOKE;" text="Photo" textFill="#8d8989">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
@@ -25,7 +24,27 @@
                 <Font name="Book Antiqua Italic" size="13.0" />
             </font>
         </Label>
-        <ScrollBar id="scroll" fx:id="scroll" layoutX="409.0" layoutY="453.0" orientation="VERTICAL" prefHeight="148.0" prefWidth="14.0" style="-fx-background-color: WHITESMOKE;" />
-        <TextArea id="textField" fx:id="textField" layoutX="34.0" layoutY="453.0" prefHeight="148.0" prefWidth="357.0" promptText="say something..." />
+        <ScrollBar id="scroll" fx:id="scroll" layoutX="406.0" layoutY="221.0" onDragDetected="#ScrollOption" orientation="VERTICAL" prefHeight="148.0" prefWidth="14.0" style="-fx-background-color: WHITESMOKE;" />
+        <TextArea id="textField" fx:id="textField" layoutX="9.0" layoutY="453.0" prefHeight="148.0" prefWidth="357.0" promptText="say something..." />
+      <Button id="GoToH" fx:id="GoToH" layoutX="367.0" layoutY="17.0" mnemonicParsing="false" onAction="#GoToHome" style="-fx-background-color: WHITE;" text="Home" textFill="#8d8d8d">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="emojiB" fx:id="emojiB" layoutX="371.0" layoutY="491.0" mnemonicParsing="false" onAction="#OpenEmoji" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: WHITE;" text="Emoji" textFill="#6b6b6b">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button id="sendB" fx:id="sendB" layoutX="371.0" layoutY="453.0" mnemonicParsing="false" onAction="#SendMessage" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: WHITE;" text="Send" textFill="#6b6b6b">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button id="fileB" fx:id="fileB" layoutX="371.0" layoutY="529.0" mnemonicParsing="false" onAction="#SendFile" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: WHITE;" text="Files" textFill="#6b6b6b">
+         <font>
+            <Font name="Book Antiqua Bold" size="12.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
