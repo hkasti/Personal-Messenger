@@ -51,10 +51,5 @@ public class SignUpController {
         String username = passSignU.getText();
 
     }
-    public void GotoPass(){
-        setPass();
-    }
-    public void DoNothing(){
 
-    }
 }

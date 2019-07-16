@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import static java.lang.Boolean.TRUE;
 
@@ -51,7 +53,13 @@ public class ChatroomController {
 
     }
     public void SendMessage(){
-        Text message=new Text(textField.getText());
+        Calendar calendar = Calendar.getInstance(); // gets current instance of the calendar
+
+
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
+
+
+        Text message=new Text(textField.getText() + "        " +   formatter.format(calendar.getTime()));
         message.setFont(Font.font("Book Antiqua Bold",12));
         message.setWrappingWidth(120);
         //Text From User:
@@ -72,8 +80,19 @@ public class ChatroomController {
         File selectedfile = fileChooser.showOpenDialog(null);
         if(selectedfile != null)
         {
-            image.getImage();
-            Vbox.getChildren().add(image);
+
+            Text message=new Text(selectedfile.getName() + "        " +    Calendar.getInstance().getTime());
+            message.setOnMouseClicked(e ->
+            {
+
+            });
+            message.setFont(Font.font("Book Antiqua Bold",12));
+            message.setWrappingWidth(120);
+            //Text From User:
+            if(TRUE){
+                message.setFill(Color.GRAY);
+            }
+            Vbox.getChildren().add(message);
 
         }else{
 

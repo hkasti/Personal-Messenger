@@ -1,19 +1,25 @@
 package UI.Profile;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
+import java.io.File;
 import java.io.IOException;
 
 public class ProfileController {
     public Button GoToH,editNameB,editUserB,editPassB,changePicB,proPicB;
     public TextField name,user;
     public PasswordField pass;
+    public MouseEvent mouseEvent;
     public void setName(){
         String  Name = name.getText();
     }
@@ -32,11 +38,14 @@ public class ProfileController {
     public void editPass(){
         setPass();
     }
-    public void setPic(){
+    public void setPic(MouseEvent mouseEvent){
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showOpenDialog(((Node) mouseEvent.getSource()).getScene().getWindow());
+        Image image = new Image(file.toURI().toString());
 
     }
     public void editPic(){
-        setPic();
+        setPic(mouseEvent);
     }
 
 

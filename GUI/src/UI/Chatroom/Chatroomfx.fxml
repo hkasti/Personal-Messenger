@@ -46,7 +46,7 @@
             <Font name="Book Antiqua Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView id="image" fx:id="image" fitHeight="85.0" fitWidth="85.0" layoutX="17.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="image" fx:id="image" fitHeight="85.0" fitWidth="85.0" layoutX="17.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#OpenPro" />
       <ScrollPane hbarPolicy="NEVER" id="scrollPane" fx:id="scrollPane" layoutX="16.0" layoutY="124.0" prefHeight="329.0" prefWidth="357.0" style="-fx-background-color: WHITE;">
         <content>
             <VBox id="Vbox" fx:id="Vbox" maxWidth="355.0" prefHeight="328.0" prefWidth="355.0" style="-fx-background-color: ALICEBLUE;" />
