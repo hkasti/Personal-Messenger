@@ -1,22 +1,28 @@
 package rmi;
 
+import database.MessageDB;
 import database.PersonDB;
+import logic.Message;
 import logic.Person;
 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
 public class Controller extends UnicastRemoteObject implements ControllerInterface {
     PersonDB personDB;
+    MessageDB messageDB;
 
     public Controller() throws RemoteException {
         super();
         try {
             this.personDB = new PersonDB();
+            this.messageDB = new MessageDB();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -56,18 +62,32 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
     }
 
     @Override
-    public void SendMessage(String form, String to, String content) throws RemoteException {
-
+    public void sendMessage(String from, String to, String content) throws RemoteException {
+        Message message = new Message(false, content, from, to, new Date());
+        try {
+            messageDB.addMessage(message);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
-    public void SendFile(String from, String to, Byte[] file) throws RemoteException {
+    public void sendFile(String from, String to, Byte[] file) throws RemoteException {
 
     }
 
     @Override
     public ArrayList<Map<String, Object>> retrieveAllChatHistoryFromUser(String username, String opos) throws RemoteException {
-        return null;
+        try {
+            return messageDB.getAllMessages(username, opos);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override

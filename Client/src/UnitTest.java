@@ -40,8 +40,15 @@ public class UnitTest {
     }
 
     @Test
-    public void test2_() {
-
+    public void test2_send_and_retrieve_message() throws RemoteException, NotBoundException, MalformedURLException {
+        init();
+        String currentUser = "zahra99";
+        this.controller.username = currentUser;
+        String user = "ahmad12";
+        String message = "salam 123 zange madreseh";
+        this.controller.sendMessage(user, message);
+        String actualText = (String) this.controller.retriveAllChatHistoryFromUser(user).get(0).get("text");
+        assertEquals(message, actualText);
     }
 
 }

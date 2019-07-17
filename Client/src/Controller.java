@@ -40,12 +40,12 @@ public class Controller {
         stub.removeUser(this.username);
     }
 
-    public void SendMessage(String to_user, String content) throws RemoteException {
-        this.stub.SendMessage(this.username, to_user, content);
+    public void sendMessage(String to_user, String content) throws RemoteException {
+        this.stub.sendMessage(this.username, to_user, content);
     }
 
-    public void SendFile(String to, Byte[] file) throws RemoteException {
-        stub.SendFile(this.username, to, file);
+    public void sendFile(String to, Byte[] file) throws RemoteException {
+        stub.sendFile(this.username, to, file);
     }
 
 

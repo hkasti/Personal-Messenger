@@ -5,11 +5,11 @@ import java.util.Date;
 public class Message {
     private boolean isFile;
     private String content;
-    private Person from;
-    private Person to;
+    private String from;
+    private String to;
     private Date time;
 
-    public Message(boolean isFile, String content, Person from, Person to, Date time) {
+    public Message(boolean isFile, String content, String from, String to, Date time) {
         this.isFile = isFile;
         this.content = content;
         this.from = from;
@@ -25,11 +25,12 @@ public class Message {
         return content;
     }
 
-    public Person getFrom() {
+    public String getFrom() {
+        System.out.println(from);
         return from;
     }
 
-    public Person getTo() {
+    public String getTo() {
         return to;
     }
 
