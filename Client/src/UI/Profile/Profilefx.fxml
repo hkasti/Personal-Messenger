@@ -10,7 +10,7 @@
 
 <AnchorPane id="profilePane" fx:id="profilePane" prefHeight="620.0" prefWidth="430.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Profile.ProfileController">
     <children>
-        <TextField id="name" fx:id="name" layoutX="55.0" layoutY="344.0" onKeyReleased="#setName" prefHeight="28.0" prefWidth="149.0" promptText="#promptName">
+        <TextField id="name" fx:id="name" layoutX="55.0" layoutY="344.0" onKeyReleased="#setName" prefHeight="28.0" prefWidth="149.0" promptText="firstname">
             <font>
                 <Font name="Book Antiqua Italic" size="12.0" />
             </font>
@@ -66,7 +66,7 @@
             <Font name="Book Antiqua Italic" size="12.0" />
          </font>
       </TextField>
-      <TextField id="familyname" fx:id="familyname" layoutX="55.0" layoutY="392.0" onKeyReleased="#setFamilyName" prefHeight="28.0" prefWidth="149.0" promptText="FamilyName" />
+      <TextField id="familyname" fx:id="familyname" layoutX="55.0" layoutY="392.0" onKeyReleased="#setFamilyName" prefHeight="28.0" prefWidth="149.0" promptText="lastname" />
       <Button id="setFamilyNameB" fx:id="setFamilyNameB" layoutX="307.0" layoutY="392.0" mnemonicParsing="false" onAction="#setFamilyName" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Set" textFill="#727272">
          <font>
             <Font name="Book Antiqua" size="12.0" />

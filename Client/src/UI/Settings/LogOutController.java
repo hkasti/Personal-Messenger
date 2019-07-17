@@ -5,13 +5,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import rmi.Controller;
 
 import java.io.IOException;
+import java.rmi.NotBoundException;
 
 public class LogOutController {
 
-    public Button logOutYesB,logOutNoB;
-    public void LogOYesB() throws IOException {
+    public Button logOutYesB, logOutNoB;
+
+    public void LogOYesB() throws IOException, NotBoundException {
         Stage stage = (Stage) logOutYesB.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().
@@ -21,9 +24,10 @@ public class LogOutController {
         Scene scene = new Scene(root);
         stage2.setScene(scene);
         stage2.show();
-
+        new Controller().username = "";
 
     }
+
     public void NoB() throws IOException {
         Stage stage = (Stage) logOutNoB.getScene().getWindow();
         stage.close();
