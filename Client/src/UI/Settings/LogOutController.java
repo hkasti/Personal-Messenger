@@ -11,7 +11,7 @@ import java.io.IOException;
 public class LogOutController {
 
     public Button logOutYesB,logOutNoB;
-    public void YesB() throws IOException {
+    public void LogOYesB() throws IOException {
         Stage stage = (Stage) logOutYesB.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().
