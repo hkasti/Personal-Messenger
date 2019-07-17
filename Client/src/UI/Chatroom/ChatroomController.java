@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -30,6 +31,10 @@ public class ChatroomController {
     public TextArea textField;
     public VBox Vbox;
     public ImageView image;
+    public Label status,name;
+    public ScrollPane emojiBox;
+    public HBox Hbox;
+
     public void OpenPro() throws IOException {
         Stage stage = (Stage) proPicB.getScene().getWindow();
         stage.close();
@@ -54,9 +59,6 @@ public class ChatroomController {
 
     }
 
-    public void textArea(){
-
-    }
     public void SendMessage(){
         Calendar calendar = Calendar.getInstance(); // gets current instance of the calendar
 
@@ -106,5 +108,10 @@ public class ChatroomController {
     }
     public void OpenEmoji(){
 
+        Hbox.setVisible(true);
+
     }
+    public void setName(){
+    }
+    public void setStatus(){}
 }

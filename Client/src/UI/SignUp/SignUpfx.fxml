@@ -29,12 +29,12 @@
                 <Font size="10.0" />
             </font>
         </Label>
-      <TextField id="userSignU" fx:id="userSignU" layoutX="191.0" layoutY="154.0" onAction="#setUser" prefHeight="25.0" prefWidth="172.0" promptText="User">
+      <TextField id="userSignU" fx:id="userSignU" layoutX="191.0" layoutY="154.0" onKeyReleased="#setUser" prefHeight="25.0" prefWidth="172.0" promptText="User">
          <font>
             <Font name="Book Antiqua Bold" size="13.0" />
          </font>
       </TextField>
-        <PasswordField id="passSignU" fx:id="passSignU" layoutX="191.0" layoutY="190.0" onAction="#setPass"  prefHeight="27.0" prefWidth="172.0" promptText="Pass">
+        <PasswordField id="passSignU" fx:id="passSignU" layoutX="191.0" layoutY="190.0" onKeyReleased="#setPass"  prefHeight="27.0" prefWidth="172.0" promptText="Pass">
             <font>
                 <Font name="Book Antiqua Bold" size="13.0" />
             </font>
