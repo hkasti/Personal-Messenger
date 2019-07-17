@@ -47,10 +47,6 @@ public class SignUpController {
     public void setUser() throws IOException {
         //userSignU.accessibleTextProperty().setValue(scanner.nextLine());
         String username = userSignU.getText();
-        byte data[] = username.getBytes();
-        FileOutputStream out = new FileOutputStream("m_data");
-        out.write(data);
-        out.close();
     }
     public void setPass(){
         //passSignU.accessibleTextProperty().setValue(scanner.nextLine());

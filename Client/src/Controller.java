@@ -20,8 +20,6 @@ public class Controller {
 
     public Controller() throws RemoteException, NotBoundException, MalformedURLException, FileNotFoundException {
         this.stub = (ControllerInterface) Naming.lookup("rmi://" + server_ip + ":5000/messenger");
-        File file = new File("m_data");
-        this.username = new Scanner(file).nextLine();
     }
 
 
@@ -33,6 +31,7 @@ public class Controller {
                 data.get("lastname"),
                 data.get("email"),
                 img);
+        this.username = data.get("user");
     }
 
     public Map<String, Object> getUserInfo(String username) throws RemoteException {
@@ -53,8 +52,8 @@ public class Controller {
     }
 
 
-//    TODO
-    public void getFile(){
+    //    TODO
+    public void getFile() {
 
     }
 
@@ -70,8 +69,8 @@ public class Controller {
 
 
     public void changeName(String firstname, String lastName) throws RemoteException {
-    
-    this.stub.changeName(this.username, firstname, lastName);
+
+        this.stub.changeName(this.username, firstname, lastName);
     }
 
     public void changePass(String newPass) throws RemoteException {
@@ -79,8 +78,15 @@ public class Controller {
 
     }
 
-    public void changePic(BufferedImage img) throws RemoteException{
+    public void changePic(BufferedImage img) throws RemoteException {
         this.stub.changePic(this.username, img);
 
+    }
+
+    public boolean signin(String user, String pass) throws RemoteException {
+        boolean is_valid = this.stub.isUserPassValid(user, pass);
+        if (is_valid)
+            this.username = username;
+        return is_valid;
     }
 }

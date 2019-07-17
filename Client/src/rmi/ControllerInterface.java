@@ -25,9 +25,11 @@ public interface ControllerInterface extends Remote {
 
     ArrayList<String> retrieveAllChatsUsername(String username) throws RemoteException;
 
-    void changeName(String username, String firstname, String lastName);
+    void changeName(String username, String firstname, String lastName) throws RemoteException;
 
-    void changePass(String username, String newPass);
+    void changePass(String username, String newPass) throws RemoteException;
 
-    void changePic(String username, BufferedImage img);
+    void changePic(String username, BufferedImage img) throws RemoteException;
+
+    boolean isUserPassValid(String user, String pass) throws RemoteException;
 }
