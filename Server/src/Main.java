@@ -5,7 +5,7 @@ import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 
 public class Main {
-    static String port =
+    static int port = 5000;
 
     public static void main(String[] args) {
         try {
@@ -17,9 +17,9 @@ public class Main {
             cmd = "cp rmi/Controller_Stub.class ../../../Client/out/production/Client/rmi/Controller_Stub.class";
             p = Runtime.getRuntime().exec(cmd);
             p.waitFor();
-            LocateRegistry.createRegistry(5000);
+            LocateRegistry.createRegistry(port);
             ControllerInterface stub = new Controller();
-            Naming.rebind("rmi://0.0.0.0:5000/messenger", stub);
+            Naming.rebind("rmi://0.0.0.0:" + port + "/messenger", stub);
         } catch (Exception e) {
             e.printStackTrace();
         }
