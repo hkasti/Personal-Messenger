@@ -61,7 +61,6 @@ public class UnitTest {
         this.controller.username = currentUser;
         String user = "ahmad12";
         File file = new File("test2.mp4");
-//        byte[] fileContent = Files.readAllBytes(file.toPath());
         controller.sendFile(user, file);
 
     }
