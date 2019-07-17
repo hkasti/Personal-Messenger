@@ -5,8 +5,8 @@ import logic.Person;
 import java.sql.*;
 
 public class PersonDB {
-    private Connection connection;
-    private PreparedStatement preparedStatement;
+    private static Connection connection;
+    private static PreparedStatement preparedStatement;
 
     public PersonDB() throws Exception {
 //        Class.forName("org.postgresql.Driver");
@@ -19,15 +19,15 @@ public class PersonDB {
                 + "username VARCHAR(20),"
                 + "password VARCHAR(20),"
                 + "image VARCHAR(100),"
-                + "lastSeen DATE,"
-                + " );";
+                + "lastSeen DATE"
+                + ")";
 
         Statement stmt = connection.createStatement();
         stmt.execute(personSqlCreate);
     }
 
-    public void addPerson(Person person) throws Exception {
-        preparedStatement = connection.prepareStatement("insert into person values (default ,?,?,?,?, ?,?,?)");
+    public static void addPerson(Person person) throws Exception {
+        preparedStatement = connection.prepareStatement("insert into person values (?,?,?,?, ?,?,?)");
         preparedStatement.setString(1, person.getFirstName());
         preparedStatement.setString(2, person.getLastName());
         preparedStatement.setString(3, person.getEmail());
@@ -52,7 +52,13 @@ public class PersonDB {
         preparedStatement.setString(1, username);
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
-        return resultSet.getString("username");
+        try {
+            return resultSet.getString("username");
+        }
+        catch (Exception e){
+            return null;
+        }
+
     }
 
     public void changePass(Person person, String newPass) throws Exception {
