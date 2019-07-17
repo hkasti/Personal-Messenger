@@ -13,4 +13,5 @@ public interface ControllerInterface extends Remote {
     public String getPerson(String username) throws RemoteException;
 
     public void removeUser(String username) throws RemoteException;
+
 }
