@@ -1,0 +1,36 @@
+2019-07-15 20:29:53.081 +0430 [4717] LOG:  listening on IPv6 address "::1", port 5432
+2019-07-15 20:29:53.082 +0430 [4717] LOG:  listening on IPv6 address "fe80::1%lo0", port 5432
+2019-07-15 20:29:53.082 +0430 [4717] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-07-15 20:29:53.083 +0430 [4717] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-07-15 20:29:53.099 +0430 [4718] LOG:  database system was shut down at 2019-07-15 20:29:52 +0430
+2019-07-15 20:29:53.104 +0430 [4717] LOG:  database system is ready to accept connections
+2019-07-16 07:45:52.565 +0430 [6822] ERROR:  relation "person" does not exist at character 13
+2019-07-16 07:45:52.565 +0430 [6822] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 07:56:59.983 +0430 [6864] ERROR:  no schema has been selected to create in at character 28
+2019-07-16 07:56:59.983 +0430 [6864] STATEMENT:  CREATE TABLE IF NOT EXISTS person(firstName VARCHAR(20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE)
+2019-07-16 07:57:33.144 +0430 [6869] ERROR:  INSERT has more expressions than target columns at character 56
+2019-07-16 07:57:33.144 +0430 [6869] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 07:59:01.520 +0430 [6883] ERROR:  syntax error at or near "VARCHAR" at character 44
+2019-07-16 07:59:01.520 +0430 [6883] STATEMENT:  CREATE TABLE IF NOT EXISTS personfirstName VARCHAR(20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE
+2019-07-16 07:59:25.777 +0430 [6887] ERROR:  INSERT has more expressions than target columns at character 56
+2019-07-16 07:59:25.777 +0430 [6887] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 08:02:03.351 +0430 [6902] ERROR:  INSERT has more expressions than target columns at character 56
+2019-07-16 08:02:03.351 +0430 [6902] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 08:04:16.410 +0430 [6910] ERROR:  INSERT has more expressions than target columns at character 56
+2019-07-16 08:04:16.410 +0430 [6910] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 08:05:48.148 +0430 [6918] ERROR:  INSERT has more expressions than target columns at character 56
+2019-07-16 08:05:48.148 +0430 [6918] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 08:05:58.789 +0430 [6922] ERROR:  syntax error at or near ")" at character 174
+2019-07-16 08:05:58.789 +0430 [6922] STATEMENT:  CREATE TABLE IF NOT EXISTS person( firstName VARCHAR (20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE, )
+2019-07-16 08:06:10.785 +0430 [6925] ERROR:  syntax error at or near ")" at character 174
+2019-07-16 08:06:10.785 +0430 [6925] STATEMENT:  CREATE TABLE IF NOT EXISTS person( firstName VARCHAR (20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE, )
+2019-07-16 08:06:27.891 +0430 [6929] ERROR:  syntax error at or near ")" at character 175
+2019-07-16 08:06:27.891 +0430 [6929] STATEMENT:  CREATE TABLE IF NOT EXISTS person( firstName VARCHAR (20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE , )
+2019-07-16 08:07:03.872 +0430 [6934] ERROR:  syntax error at or near ")" at character 182
+2019-07-16 08:07:03.872 +0430 [6934] STATEMENT:  CREATE TABLE IF NOT EXISTS person( firstName VARCHAR (20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen VARCHAR(100), )
+2019-07-16 08:07:20.376 +0430 [6938] ERROR:  syntax error at or near ")" at character 174
+2019-07-16 08:07:20.376 +0430 [6938] STATEMENT:  CREATE TABLE IF NOT EXISTS person( firstName VARCHAR (20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE, )
+2019-07-16 08:08:23.300 +0430 [6944] ERROR:  INSERT has more expressions than target columns at character 56
+2019-07-16 08:08:23.300 +0430 [6944] STATEMENT:  insert into person values (default ,$1,$2,$3,$4, $5,$6,$7)
+2019-07-16 08:08:35.090 +0430 [6947] ERROR:  syntax error at or near ")" at character 174
+2019-07-16 08:08:35.090 +0430 [6947] STATEMENT:  CREATE TABLE IF NOT EXISTS person( firstName VARCHAR (20),lastName VARCHAR(20),email VARCHAR(50),username VARCHAR(20),password VARCHAR(20),image VARCHAR(100),lastSeen DATE, )
