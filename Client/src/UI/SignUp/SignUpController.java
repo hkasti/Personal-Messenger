@@ -8,6 +8,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -42,9 +44,13 @@ public class SignUpController {
 
     }
 
-    public void setUser(){
+    public void setUser() throws IOException {
         //userSignU.accessibleTextProperty().setValue(scanner.nextLine());
         String username = userSignU.getText();
+        byte data[] = username.getBytes();
+        FileOutputStream out = new FileOutputStream("m_data");
+        out.write(data);
+        out.close();
     }
     public void setPass(){
         //passSignU.accessibleTextProperty().setValue(scanner.nextLine());

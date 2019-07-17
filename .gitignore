@@ -3,3 +3,4 @@ Server/.idea/
 Client/Client.iml
 Server/Server.iml
 Server/db/pg_stat_tmp/
+Client/m_data
