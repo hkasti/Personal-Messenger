@@ -7,20 +7,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import rmi.Controller;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Scanner;
+import java.rmi.NotBoundException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignUpController {
-    public Button signUpB,loginB;
+    public Button signUpB, loginB;
     public TextField userSignU;
     public PasswordField passSignU;
 
-    Scanner scanner=new Scanner(System.in);
-
-    public void SignUBAction() throws IOException {
+    public void SignUBAction() throws IOException, NotBoundException {
         Stage stage = (Stage) signUpB.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().
@@ -30,8 +29,25 @@ public class SignUpController {
         Scene scene = new Scene(root);
         stage2.setScene(scene);
         stage2.show();
-}
-    public void LogIBAction() throws IOException {
+        String username = userSignU.getText();
+        String password = passSignU.getText();
+        Controller controller = new Controller();
+        Map<String, String> data = new HashMap<>();
+        data.put("firstname", "");
+        data.put("lastname", "");
+        data.put("email", "");
+        data.put("user", username);
+        data.put("pass", password);
+        controller.signup(data, null);
+
+    }
+
+    public void LogIBAction() throws IOException, NotBoundException {
+        String username = userSignU.getText();
+        String password = passSignU.getText();
+        Controller controller = new Controller();
+        if (!controller.signin(username, password))
+            return;
         Stage stage = (Stage) loginB.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().
@@ -41,16 +57,6 @@ public class SignUpController {
         Scene scene = new Scene(root);
         stage2.setScene(scene);
         stage2.show();
-
-    }
-
-    public void setUser() throws IOException {
-        //userSignU.accessibleTextProperty().setValue(scanner.nextLine());
-        String username = userSignU.getText();
-    }
-    public void setPass(){
-        //passSignU.accessibleTextProperty().setValue(scanner.nextLine());
-        String username = passSignU.getText();
 
     }
 

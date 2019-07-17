@@ -1,14 +1,9 @@
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import rmi.ControllerInterface;
+import rmi.Controller;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;

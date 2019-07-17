@@ -106,4 +106,11 @@ public class PersonDB {
         int size = resultSet.getInt(1);
         return size != 0;
     }
+
+    public void changeEmail(String user, String newMail) throws SQLException {
+        preparedStatement = connection.prepareStatement("update person set email = ? where username = ?");
+        preparedStatement.setString(1, newMail);
+        preparedStatement.setString(2, user);
+        preparedStatement.executeUpdate();
+    }
 }

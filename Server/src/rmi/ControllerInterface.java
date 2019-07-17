@@ -32,4 +32,6 @@ public interface ControllerInterface extends Remote {
     public void changePic(String username, BufferedImage img) throws RemoteException;
 
     public boolean isUserPassValid(String user, String pass) throws RemoteException;
+
+    public void changeEmail(String user, String newMail) throws RemoteException;
 }

@@ -1,3 +1,5 @@
+package rmi;
+
 import rmi.ControllerInterface;
 
 import java.awt.image.BufferedImage;
@@ -14,7 +16,7 @@ import java.util.Map;
 public class Controller {
     private static final String server_ip = "127.0.0.1";
     private ControllerInterface stub;
-    public String username;
+    public static String username;
 
 
     public Controller() throws RemoteException, NotBoundException, MalformedURLException {
@@ -36,6 +38,11 @@ public class Controller {
     public Map<String, Object> getUserInfo(String username) throws RemoteException {
 //        output: {String username, String firstname, String lastname, Date lastseen, bool isTyping}
         return stub.getUser(username);
+    }
+
+    public Map<String, Object> getUserInfo() throws RemoteException {
+//        output: {String username, String firstname, String lastname, Date lastseen, bool isTyping}
+        return stub.getUser(this.username);
     }
 
     public void removeUser() throws RemoteException {
@@ -70,7 +77,6 @@ public class Controller {
 
 
     public void changeName(String firstname, String lastName) throws RemoteException {
-
         this.stub.changeName(this.username, firstname, lastName);
     }
 
@@ -105,5 +111,9 @@ public class Controller {
 
         return extension;
 
+    }
+
+    public void changeEmail(String newMail) throws RemoteException {
+        this.stub.changeEmail(username, newMail);
     }
 }

@@ -150,6 +150,11 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
         }
     }
 
+    @Override
+    public void changeEmail(String user, String newMail) throws RemoteException {
+        personDB.changeEmail(user, newMail);
+    }
+
     public static String getMD5(byte[] source) {
         StringBuilder sb = new StringBuilder();
         java.security.MessageDigest md5 = null;

@@ -10,7 +10,7 @@
 
 <AnchorPane id="profilePane" fx:id="profilePane" prefHeight="620.0" prefWidth="430.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Profile.ProfileController">
     <children>
-        <TextField id="name" fx:id="name" layoutX="55.0" layoutY="344.0" onKeyReleased="#setName" prefHeight="28.0" prefWidth="149.0" promptText="Name">
+        <TextField id="name" fx:id="name" layoutX="55.0" layoutY="344.0" onKeyReleased="#setName" prefHeight="28.0" prefWidth="149.0" promptText="#promptName">
             <font>
                 <Font name="Book Antiqua Italic" size="12.0" />
             </font>
@@ -30,27 +30,12 @@
                 <Font name="Book Antiqua Italic" size="11.0" />
             </font>
         </Label>
-        <Button id="editNameB" fx:id="editNameB" layoutX="225.0" layoutY="344.0" mnemonicParsing="false" onAction="#editName" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Edit" textFill="#727272">
+        <Button id="setPicB" fx:id="setPicB" layoutX="55.0" layoutY="235.0" mnemonicParsing="false" onAction="#setPicB" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: WHITE;" text="ChangePic" textFill="#727272">
             <font>
                 <Font name="Book Antiqua" size="12.0" />
             </font>
         </Button>
-        <Button id="editUserB" fx:id="editUserB" layoutX="225.0" layoutY="296.0" mnemonicParsing="false" onAction="#editUser" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Edit" textFill="#727272">
-            <font>
-                <Font name="Book Antiqua" size="12.0" />
-            </font>
-        </Button>
-        <Button id="editPassB" fx:id="editPassB" layoutX="225.0" layoutY="488.0" mnemonicParsing="false" onAction="#editPass" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Edit" textFill="#727272">
-            <font>
-                <Font name="Book Antiqua" size="12.0" />
-            </font>
-        </Button>
-        <Button id="changePicB" fx:id="changePicB" layoutX="55.0" layoutY="235.0" mnemonicParsing="false" onAction="#editPic" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: WHITE;" text="ChangePic" textFill="#727272">
-            <font>
-                <Font name="Book Antiqua" size="12.0" />
-            </font>
-        </Button>
-        <TextField id="user" fx:id="user" layoutX="55.0" layoutY="296.0" onAction="#setUser" prefHeight="28.0" prefWidth="149.0" promptText="User" />
+        <TextField id="user" fx:id="user" layoutX="55.0" layoutY="296.0" prefHeight="28.0" prefWidth="149.0" promptText="User" />
         <PasswordField id="pass" fx:id="pass" layoutX="55.0" layoutY="488.0" onKeyReleased="#setPass" prefHeight="28.0" prefWidth="149.0" promptText="Pass">
             <font>
                 <Font name="System Italic" size="12.0" />
@@ -61,7 +46,7 @@
             <Font name="Book Antiqua Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button id="setUserB" fx:id="setUserB" layoutX="307.0" layoutY="298.0" mnemonicParsing="false" onAction="#setUser" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Set" textFill="#727272">
+      <Button id="setUserB" fx:id="setUserB" layoutX="307.0" layoutY="298.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Set" textFill="#727272">
          <font>
             <Font name="Book Antiqua" size="12.0" />
          </font>
@@ -82,16 +67,6 @@
          </font>
       </TextField>
       <TextField id="familyname" fx:id="familyname" layoutX="55.0" layoutY="392.0" onKeyReleased="#setFamilyName" prefHeight="28.0" prefWidth="149.0" promptText="FamilyName" />
-      <Button id="editFamilyNameB" fx:id="editFamilyNameB" layoutX="225.0" layoutY="392.0" mnemonicParsing="false" onAction="#editFamilyName" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Edit" textFill="#727272">
-         <font>
-            <Font name="Book Antiqua" size="12.0" />
-         </font>
-      </Button>
-      <Button id="editEmailB" fx:id="editEmailB" layoutX="225.0" layoutY="440.0" mnemonicParsing="false" onAction="#editEmail" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Edit" textFill="#727272">
-         <font>
-            <Font name="Book Antiqua" size="12.0" />
-         </font>
-      </Button>
       <Button id="setFamilyNameB" fx:id="setFamilyNameB" layoutX="307.0" layoutY="392.0" mnemonicParsing="false" onAction="#setFamilyName" prefHeight="2.0" prefWidth="58.0" style="-fx-background-color: WHITE;" text="Set" textFill="#727272">
          <font>
             <Font name="Book Antiqua" size="12.0" />
