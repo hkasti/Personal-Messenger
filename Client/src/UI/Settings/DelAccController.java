@@ -5,13 +5,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import rmi.Controller;
 
 import java.io.IOException;
+import java.rmi.NotBoundException;
 
 public class DelAccController {
 
     public Button delAYesB,delANoB;
-    public void DelAccYesB() throws IOException {
+    public void DelAccYesB() throws IOException, NotBoundException {
         Stage stage = (Stage) delAYesB.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().
@@ -21,7 +23,7 @@ public class DelAccController {
         Scene scene = new Scene(root);
         stage2.setScene(scene);
         stage2.show();
-
+        new Controller().removeUser();
 
     }
     public void NoB() throws IOException {
