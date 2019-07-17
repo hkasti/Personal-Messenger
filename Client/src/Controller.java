@@ -1,8 +1,10 @@
 import rmi.ControllerInterface;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.nio.file.Files;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -44,8 +46,10 @@ public class Controller {
         this.stub.sendMessage(this.username, to_user, content);
     }
 
-    public void sendFile(String to, Byte[] file) throws RemoteException {
-        stub.sendFile(this.username, to, file);
+    public void sendFile(String to, File file) throws IOException {
+        String fileExt = getFileExtension(file);
+        byte[] fileContent = Files.readAllBytes(file.toPath());
+        stub.sendFile(this.username, to, fileContent, fileExt);
     }
 
 
@@ -85,5 +89,21 @@ public class Controller {
         if (is_valid)
             this.username = username;
         return is_valid;
+    }
+
+    private static String getFileExtension(File file) {
+        String extension = "";
+
+        try {
+            if (file != null && file.exists()) {
+                String name = file.getName();
+                extension = name.substring(name.lastIndexOf("."));
+            }
+        } catch (Exception e) {
+            extension = "";
+        }
+
+        return extension;
+
     }
 }

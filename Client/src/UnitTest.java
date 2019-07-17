@@ -3,8 +3,11 @@ import org.junit.jupiter.api.Test;
 import rmi.ControllerInterface;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.nio.file.Files;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -49,6 +52,18 @@ public class UnitTest {
         this.controller.sendMessage(user, message);
         String actualText = (String) this.controller.retriveAllChatHistoryFromUser(user).get(0).get("text");
         assertEquals(message, actualText);
+    }
+
+    @Test
+    public void test3_file_upload_download() throws IOException, NotBoundException {
+        init();
+        String currentUser = "zahra99";
+        this.controller.username = currentUser;
+        String user = "ahmad12";
+        File file = new File("test2.mp4");
+//        byte[] fileContent = Files.readAllBytes(file.toPath());
+        controller.sendFile(user, file);
+
     }
 
 }

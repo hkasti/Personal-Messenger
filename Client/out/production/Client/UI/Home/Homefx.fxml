@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="589.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Home.HomeController">
+   <children>
+      <Button id="HSettingsB" fx:id="HSettingsB" layoutX="213.0" layoutY="167.0" mnemonicParsing="false" onAction="#HOpenSettings" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="Settings" textFill="#727272">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ChoiceBox id="selectChat" fx:id="selectChat" layoutX="213.0" layoutY="276.0" prefWidth="150.0" style="-fx-background-color: WHITE;" />
+      <Button id="HSearchB" fx:id="HSearchB" layoutX="213.0" layoutY="220.0" mnemonicParsing="false" onAction="#HOpenSearch" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="Search" textFill="#727272">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="262.0" layoutY="280.0" text="Select Chat" textFill="#9e9e9e" />
+      <Button id="HProfileB" fx:id="HProfileB" layoutX="213.0" layoutY="115.0" mnemonicParsing="false" onAction="#HOpenProfile" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="Profile" textFill="#727272">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button id="HchatB" fx:id="HchatB" layoutX="213.0" layoutY="301.0" mnemonicParsing="false" onAction="#OpenPro" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: WHITE;" text="ChatRoom" textFill="#727272">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
