@@ -56,6 +56,7 @@ public class MessageDB {
             map.put("date", date);
             if (isFile) {
                 File file = new File(content);
+                System.out.println(content);
                 map.put("text", null);
                 map.put("file", Files.readAllBytes(file.toPath()));
             } else {
@@ -76,5 +77,23 @@ public class MessageDB {
         preparedStatement.setDate(5, new java.sql.Date(message.getTime().getTime()));
 
         preparedStatement.executeUpdate();
+    }
+
+    public ArrayList<String> getAllChatUsernames(String username) throws SQLException {
+        String query = "select * from message where (" +
+                "(toUser= '" + username + "' OR fromUser='" + username + "'))";
+        preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        ArrayList<String> results = new ArrayList<>();
+        System.out.println(query);
+        while (resultSet.next()) {
+            String user1 = resultSet.getString("fromUser");
+            String user2 = resultSet.getString("toUser");
+            if (user1.equals(username))
+                results.add(user2);
+            else
+                results.add(user1);
+        }
+        return results;
     }
 }

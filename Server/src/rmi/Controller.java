@@ -84,7 +84,7 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
             out = new FileOutputStream(f);
             out.write(file);
             out.close();
-            Message message = new Message(true, fileName, from, to, new Date());
+            Message message = new Message(true, filepath, from, to, new Date());
             messageDB.addMessage(message);
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,7 +107,12 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
 
     @Override
     public ArrayList<String> retrieveAllChatsUsername(String username) throws RemoteException {
-        return null;
+        try {
+            return this.messageDB.getAllChatUsernames(username);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override

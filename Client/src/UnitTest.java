@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,6 +64,15 @@ public class UnitTest {
         File file = new File("test2.mp4");
         controller.sendFile(user, file);
 
+    }
+
+    @Test
+    public void test4_retrieveAllChatsUsername() throws RemoteException, NotBoundException, MalformedURLException {
+        init();
+        String currentUser = "zahra99";
+        this.controller.username = currentUser;
+        ArrayList<String> users = this.controller.retriveAllChatsUsername();
+        assertEquals(true, users.contains("ahmad12"));
     }
 
 }
