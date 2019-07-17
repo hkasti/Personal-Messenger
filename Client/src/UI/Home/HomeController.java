@@ -1,5 +1,6 @@
 package UI.Home;
 
+import UI.Chatroom.ChatroomController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ import java.io.IOException;
 public class HomeController {
     public Button HSettingsB,HSearchB,HProfileB,HchatB;
     public ChoiceBox selectChat;
+    public   ChatroomController chatroomController=new ChatroomController();
     public void HOpenSearch() throws IOException {
         Stage stage = (Stage) HSearchB.getScene().getWindow();
         stage.close();
@@ -22,6 +24,7 @@ public class HomeController {
         Scene scene = new Scene(root);
         stage2.setScene(scene);
         stage2.show();
+
 
     }
     public void  HOpenSettings() throws IOException {
