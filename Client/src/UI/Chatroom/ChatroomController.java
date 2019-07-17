@@ -25,6 +25,7 @@ public class ChatroomController {
     public TextArea textField;
     public VBox Vbox;
     public ImageView image;
+
     public void OpenPro() throws IOException {
         Stage stage = (Stage) proPicB.getScene().getWindow();
         stage.close();

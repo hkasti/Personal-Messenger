@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -16,10 +17,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class ProfileController {
-    public Button GoToH,editNameB,editUserB,editPassB,changePicB,proPicB;
-    public TextField name,user;
+    public Button GoToH,editNameB,editUserB,editPassB,editEmailB,editFamilyNameB,changePicB,
+            setNameB,setUserB,setEmailB,setFamilyNameB;
+    public TextField name,user,familyname,email;
     public PasswordField pass;
     public MouseEvent mouseEvent;
+    public ImageView proPic;
     public void setName(){
         String  Name = name.getText();
     }
@@ -40,13 +43,24 @@ public class ProfileController {
     }
     public void setPic(MouseEvent mouseEvent){
         FileChooser fileChooser = new FileChooser();
-        File file = fileChooser.showOpenDialog(((Node) mouseEvent.getSource()).getScene().getWindow());
+        File file = fileChooser.showOpenDialog(null);
         Image image = new Image(file.toURI().toString());
+        proPic.setImage(image);
+
+
+    }
+    public void setFamilyName(){
+
+
+    }
+    public void setEmail(){
 
     }
     public void editPic(){
         setPic(mouseEvent);
     }
+    public void editFamilyName(){}
+    public void editEmail(){}
 
 
     public void GoToHome() throws IOException {
