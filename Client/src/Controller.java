@@ -1,8 +1,6 @@
 import rmi.ControllerInterface;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -10,26 +8,25 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Controller {
-    private static final String server_ip = "192.168.43.157";
+    private static final String server_ip = "127.0.0.1";
     private ControllerInterface stub;
-    private String username;
+    public String username;
 
 
-    public Controller() throws RemoteException, NotBoundException, MalformedURLException, FileNotFoundException {
+    public Controller() throws RemoteException, NotBoundException, MalformedURLException {
         this.stub = (ControllerInterface) Naming.lookup("rmi://" + server_ip + ":5000/messenger");
     }
 
 
     public void signup(Map<String, String> data, BufferedImage img) throws IOException {
         this.stub.signup(
-                data.get("user"),
-                data.get("pass"),
                 data.get("firstname"),
                 data.get("lastname"),
                 data.get("email"),
+                data.get("user"),
+                data.get("pass"),
                 img);
         this.username = data.get("user");
     }

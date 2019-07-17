@@ -3,6 +3,8 @@ package database;
 import logic.Person;
 
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PersonDB {
     private static Connection connection;
@@ -47,13 +49,21 @@ public class PersonDB {
         }
     }
 
-    public String getPerson(String username) throws Exception {
+    public Map<String, Object> getPerson(String username) throws Exception {
         preparedStatement = connection.prepareStatement("select * from person where username = ?");
         preparedStatement.setString(1, username);
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
         try {
-            return resultSet.getString("username");
+            Map<String, Object> result = new HashMap<>();
+            result.put("username", resultSet.getString("username"));
+            result.put("lastseen", resultSet.getDate("lastSeen").toString());
+            result.put("firstname", resultSet.getString("firstname"));
+            result.put("lastname", resultSet.getString("lastname"));
+            result.put("email", resultSet.getString("email"));
+//            TODO
+            result.put("isTyping",true);
+            return result;
         }
         catch (Exception e){
             return null;
