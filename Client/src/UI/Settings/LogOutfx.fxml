@@ -9,7 +9,7 @@
 
 <AnchorPane id="logOutPane" fx:id="logOutPane" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: ALICEBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Settings.LogOutController">
     <children>
-        <Button id="logOutYesB" fx:id="logOutYesB" layoutX="141.0" layoutY="138.0" mnemonicParsing="false" style="-fx-background-color: WHITE;" text="Yes " textFill="#949494" onAction="#YesB">
+        <Button id="logOutYesB" fx:id="logOutYesB" layoutX="141.0" layoutY="138.0" mnemonicParsing="false" style="-fx-background-color: WHITE;" text="Yes " textFill="#949494" onAction="#LogOYesB">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>

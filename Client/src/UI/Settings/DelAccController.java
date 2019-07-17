@@ -11,7 +11,7 @@ import java.io.IOException;
 public class DelAccController {
 
     public Button delAYesB,delANoB;
-    public void YesB() throws IOException {
+    public void DelAccYesB() throws IOException {
         Stage stage = (Stage) delAYesB.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().
