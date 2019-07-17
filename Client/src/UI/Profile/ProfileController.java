@@ -54,6 +54,7 @@ public class ProfileController {
 
     }
     public void setEmail(){
+       // String email
 
     }
     public void editPic(){

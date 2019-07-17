@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -12,9 +13,14 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import rmi.ControllerInterface;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -25,6 +31,9 @@ public class ChatroomController {
     public TextArea textField;
     public VBox Vbox;
     public ImageView image;
+    public Label status,name;
+    public ScrollPane emojiBox;
+    public HBox Hbox;
 
     public void OpenPro() throws IOException {
         Stage stage = (Stage) proPicB.getScene().getWindow();
@@ -50,9 +59,6 @@ public class ChatroomController {
 
     }
 
-    public void textArea(){
-
-    }
     public void SendMessage(){
         Calendar calendar = Calendar.getInstance(); // gets current instance of the calendar
 
@@ -102,5 +108,10 @@ public class ChatroomController {
     }
     public void OpenEmoji(){
 
+        Hbox.setVisible(true);
+
     }
+    public void setName(){
+    }
+    public void setStatus(){}
 }
