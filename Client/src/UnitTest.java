@@ -75,4 +75,42 @@ public class UnitTest {
         assertEquals(true, users.contains("ahmad12"));
     }
 
+    @Test
+    public void test5_changeName() throws IOException, NotBoundException {
+        init();
+        String username = "a123";
+        Map<String, String> data = new HashMap<>();
+        data.put("user", username);
+        data.put("pass", "123");
+        data.put("firstname", "zahra");
+        data.put("lastname", "mahmoudzadeh");
+        data.put("email", "test@tst.tst");
+        controller.signup(data, null);
+        controller.changeName("name2", "name3");
+        String actualfirstName = (String) controller.getUserInfo(username).get("firstname");
+        assertEquals("name2", actualfirstName);
+        controller.removeUser();
+        Object o = controller.getUserInfo(username);
+        assertEquals(null, o);
+    }
+
+    @Test
+    public void test6_changePass() throws IOException, NotBoundException {
+        init();
+        String username = "a124233";
+        Map<String, String> data = new HashMap<>();
+        data.put("user", username);
+        data.put("pass", "123");
+        data.put("firstname", "zahra");
+        data.put("lastname", "mahmoudzadeh");
+        data.put("email", "test@tst.tst");
+        controller.signup(data, null);
+        controller.changePass("pass42");
+        boolean tst = this.controller.signin(username, "pass42");
+        assertEquals(true, tst);
+        controller.removeUser();
+        Object o = controller.getUserInfo(username);
+        assertEquals(null, o);
+    }
+
 }

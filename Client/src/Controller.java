@@ -87,7 +87,7 @@ public class Controller {
     public boolean signin(String user, String pass) throws RemoteException {
         boolean is_valid = this.stub.isUserPassValid(user, pass);
         if (is_valid)
-            this.username = username;
+            this.username = user;
         return is_valid;
     }
 

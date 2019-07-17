@@ -47,7 +47,6 @@ public class MessageDB {
         preparedStatement = connection.prepareStatement(query);
         ResultSet resultSet = preparedStatement.executeQuery();
         ArrayList<Map<String, Object>> reslutList = new ArrayList<>();
-        System.out.println(query);
         while (resultSet.next()) {
             Map<String, Object> map = new HashMap<>();
             String date = resultSet.getTime("sentTime").toString();
@@ -56,7 +55,6 @@ public class MessageDB {
             map.put("date", date);
             if (isFile) {
                 File file = new File(content);
-                System.out.println(content);
                 map.put("text", null);
                 map.put("file", Files.readAllBytes(file.toPath()));
             } else {

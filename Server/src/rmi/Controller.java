@@ -117,12 +117,22 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
 
     @Override
     public void changeName(String username, String firstname, String lastName) throws RemoteException {
-
+        try {
+            personDB.changeName(username, firstname, lastName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
     public void changePass(String username, String newPass) throws RemoteException {
-
+        try {
+            personDB.changePass(username, newPass);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
@@ -132,7 +142,12 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
 
     @Override
     public boolean isUserPassValid(String user, String pass) throws RemoteException {
-        return false;
+        try {
+            return personDB.checkPassword(user, pass);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     public static String getMD5(byte[] source) {
