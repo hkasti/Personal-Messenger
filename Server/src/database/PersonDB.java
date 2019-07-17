@@ -62,19 +62,19 @@ public class PersonDB {
             result.put("lastname", resultSet.getString("lastname"));
             result.put("email", resultSet.getString("email"));
 //            TODO
-            result.put("isTyping",true);
+            result.put("isTyping", true);
             return result;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             return null;
         }
 
     }
 
-    public void changePass(Person person, String newPass) throws Exception {
-        preparedStatement = connection.prepareStatement("update person set pass = ? where username = ?");
+    public void changePass(String username, String newPass) throws Exception {
+        preparedStatement = connection.prepareStatement("update person set password = ? where username = ?");
         preparedStatement.setString(1, newPass);
-        preparedStatement.setString(2, person.getUsername());
+        System.out.println(newPass);
+        preparedStatement.setString(2, username);
         preparedStatement.executeUpdate();
     }
 
@@ -89,4 +89,21 @@ public class PersonDB {
         connection.close();
     }
 
+    public void changeName(String username, String firstname, String lastName) throws SQLException {
+        preparedStatement = connection.prepareStatement("update person set firstname = ?, lastname = ? where username = ?");
+        preparedStatement.setString(1, firstname);
+        preparedStatement.setString(2, lastName);
+        preparedStatement.setString(3, username);
+        preparedStatement.executeUpdate();
+    }
+
+    public boolean checkPassword(String user, String pass) throws SQLException {
+        preparedStatement = connection.prepareStatement("select count(*) from person where username = ? and password = ?");
+        preparedStatement.setString(1, user);
+        preparedStatement.setString(2, pass);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        int size = resultSet.getInt(1);
+        return size != 0;
+    }
 }

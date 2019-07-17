@@ -1,8 +1,10 @@
 import rmi.ControllerInterface;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.nio.file.Files;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -40,12 +42,14 @@ public class Controller {
         stub.removeUser(this.username);
     }
 
-    public void SendMessage(String to_user, String content) throws RemoteException {
-        this.stub.SendMessage(this.username, to_user, content);
+    public void sendMessage(String to_user, String content) throws RemoteException {
+        this.stub.sendMessage(this.username, to_user, content);
     }
 
-    public void SendFile(String to, Byte[] file) throws RemoteException {
-        stub.SendFile(this.username, to, file);
+    public void sendFile(String to, File file) throws IOException {
+        String fileExt = getFileExtension(file);
+        byte[] fileContent = Files.readAllBytes(file.toPath());
+        stub.sendFile(this.username, to, fileContent, fileExt);
     }
 
 
@@ -83,7 +87,23 @@ public class Controller {
     public boolean signin(String user, String pass) throws RemoteException {
         boolean is_valid = this.stub.isUserPassValid(user, pass);
         if (is_valid)
-            this.username = username;
+            this.username = user;
         return is_valid;
+    }
+
+    private static String getFileExtension(File file) {
+        String extension = "";
+
+        try {
+            if (file != null && file.exists()) {
+                String name = file.getName();
+                extension = name.substring(name.lastIndexOf("."));
+            }
+        } catch (Exception e) {
+            extension = "";
+        }
+
+        return extension;
+
     }
 }

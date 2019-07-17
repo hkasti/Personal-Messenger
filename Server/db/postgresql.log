@@ -54,3 +54,34 @@
 2019-07-17 18:04:19.557 +0430 [686] LOG:  invalid record length at 0/16739E8: wanted 24, got 0
 2019-07-17 18:04:19.557 +0430 [686] LOG:  redo done at 0/16739B0
 2019-07-17 18:04:19.568 +0430 [685] LOG:  database system is ready to accept connections
+2019-07-17 21:16:07.814 +0430 [1683] ERROR:  syntax error at or near "from" at character 37
+2019-07-17 21:16:07.814 +0430 [1683] STATEMENT:  CREATE TABLE IF NOT EXISTS message( from VARCHAR (20),to VARCHAR(20),content VARCHAR(500),isFile BIT,password VARCHAR(20),time DATE)
+2019-07-17 21:17:36.525 +0430 [1696] ERROR:  syntax error at or near "toUser" at character 45
+2019-07-17 21:17:36.525 +0430 [1696] STATEMENT:  select * from person where ((toUser=nulland toUser=ahmad12) or (toUser=ahmad12and toUser=null))
+2019-07-17 21:18:34.490 +0430 [1715] ERROR:  column "touser" does not exist at character 30
+2019-07-17 21:18:34.490 +0430 [1715] STATEMENT:  select * from person where ((toUser=null and toUser=ahmad12) or (toUser=ahmad12 and toUser=null))
+2019-07-17 21:19:37.364 +0430 [1736] ERROR:  column "touser" does not exist at character 30
+2019-07-17 21:19:37.364 +0430 [1736] STATEMENT:  select * from person where ((toUser=null and toUser=ahmad12) or (toUser=ahmad12 and toUser=null))
+2019-07-17 21:20:17.501 +0430 [1753] ERROR:  column "ahmad12" does not exist at character 54
+2019-07-17 21:20:17.501 +0430 [1753] STATEMENT:  select * from message where ((toUser=null and toUser=ahmad12) or (toUser=ahmad12 and toUser=null))
+2019-07-17 21:36:53.806 +0430 [1869] ERROR:  column "isfile" is of type bit but expression is of type boolean at character 38
+2019-07-17 21:36:53.806 +0430 [1869] HINT:  You will need to rewrite or cast the expression.
+2019-07-17 21:36:53.806 +0430 [1869] STATEMENT:  insert into message values ($1,$2,$3,$4,$5)
+2019-07-17 21:38:16.234 +0430 [1898] ERROR:  column "isfile" is of type bit but expression is of type boolean at character 38
+2019-07-17 21:38:16.234 +0430 [1898] HINT:  You will need to rewrite or cast the expression.
+2019-07-17 21:38:16.234 +0430 [1898] STATEMENT:  insert into message values ($1,$2,$3,$4,$5)
+2019-07-17 21:38:30.709 +0430 [1898] ERROR:  column "isfile" is of type bit but expression is of type boolean at character 38
+2019-07-17 21:38:30.709 +0430 [1898] HINT:  You will need to rewrite or cast the expression.
+2019-07-17 21:38:30.709 +0430 [1898] STATEMENT:  insert into message values ($1,$2,$3,$4,$5)
+2019-07-17 22:04:10.708 +0430 [2138] ERROR:  column "tofrom" does not exist at character 53
+2019-07-17 22:04:10.708 +0430 [2138] STATEMENT:  select * from message where ((toUser= 'zahra99' and toFrom='ahmad12') or (toUser='ahmad12' and toFrom='zahra99'))
+2019-07-17 23:31:38.706 +0430 [685] LOG:  received smart shutdown request
+2019-07-17 23:31:38.707 +0430 [685] LOG:  worker process: logical replication launcher (PID 692) exited with exit code 1
+2019-07-17 23:31:38.707 +0430 [687] LOG:  shutting down
+2019-07-17 23:31:38.718 +0430 [685] LOG:  database system is shut down
+2019-07-17 23:34:01.957 +0430 [600] LOG:  listening on IPv6 address "::1", port 5432
+2019-07-17 23:34:01.957 +0430 [600] LOG:  listening on IPv6 address "fe80::1%lo0", port 5432
+2019-07-17 23:34:01.957 +0430 [600] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-07-17 23:34:01.958 +0430 [600] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-07-17 23:34:01.971 +0430 [601] LOG:  database system was shut down at 2019-07-17 23:31:38 +0430
+2019-07-17 23:34:01.976 +0430 [600] LOG:  database system is ready to accept connections

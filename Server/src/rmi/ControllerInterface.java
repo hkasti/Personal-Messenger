@@ -16,9 +16,9 @@ public interface ControllerInterface extends Remote {
 
     public void removeUser(String username) throws RemoteException;
 
-    public void SendMessage(String form, String to, String content) throws RemoteException;
+    public void sendMessage(String form, String to, String content) throws RemoteException;
 
-    public void SendFile(String from, String to, Byte[] file) throws RemoteException;
+    public void sendFile(String from, String to, byte[] file, String fileExt) throws RemoteException;
 
 
     public ArrayList<Map<String, Object>> retrieveAllChatHistoryFromUser(String username, String opos) throws RemoteException;

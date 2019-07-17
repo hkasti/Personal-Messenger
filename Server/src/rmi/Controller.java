@@ -1,22 +1,30 @@
 package rmi;
 
+import com.sun.tools.javac.util.ArrayUtils;
+import database.MessageDB;
 import database.PersonDB;
+import logic.Message;
 import logic.Person;
 
 import java.awt.image.BufferedImage;
+import java.io.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
 public class Controller extends UnicastRemoteObject implements ControllerInterface {
     PersonDB personDB;
+    MessageDB messageDB;
 
     public Controller() throws RemoteException {
         super();
         try {
             this.personDB = new PersonDB();
+            this.messageDB = new MessageDB();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -56,33 +64,75 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
     }
 
     @Override
-    public void SendMessage(String form, String to, String content) throws RemoteException {
-
+    public void sendMessage(String from, String to, String content) throws RemoteException {
+        Message message = new Message(false, content, from, to, new Date());
+        try {
+            messageDB.addMessage(message);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
-    public void SendFile(String from, String to, Byte[] file) throws RemoteException {
-
+    public void sendFile(String from, String to, byte[] file, String fileExt) throws RemoteException {
+        String fileName = getMD5(file);
+        String filepath = "uploads/" + fileName + "." + fileExt;
+        FileOutputStream out = null;
+        try {
+            File f = new File(filepath);
+            out = new FileOutputStream(f);
+            out.write(file);
+            out.close();
+            Message message = new Message(true, filepath, from, to, new Date());
+            messageDB.addMessage(message);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
     public ArrayList<Map<String, Object>> retrieveAllChatHistoryFromUser(String username, String opos) throws RemoteException {
-        return null;
+        try {
+            return messageDB.getAllMessages(username, opos);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
     public ArrayList<String> retrieveAllChatsUsername(String username) throws RemoteException {
-        return null;
+        try {
+            return this.messageDB.getAllChatUsernames(username);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
     public void changeName(String username, String firstname, String lastName) throws RemoteException {
-
+        try {
+            personDB.changeName(username, firstname, lastName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
     public void changePass(String username, String newPass) throws RemoteException {
-
+        try {
+            personDB.changePass(username, newPass);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
     }
 
     @Override
@@ -92,6 +142,27 @@ public class Controller extends UnicastRemoteObject implements ControllerInterfa
 
     @Override
     public boolean isUserPassValid(String user, String pass) throws RemoteException {
-        return false;
+        try {
+            return personDB.checkPassword(user, pass);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RemoteException(e.getMessage());
+        }
+    }
+
+    public static String getMD5(byte[] source) {
+        StringBuilder sb = new StringBuilder();
+        java.security.MessageDigest md5 = null;
+        try {
+            md5 = java.security.MessageDigest.getInstance("MD5");
+            md5.update(source);
+        } catch (NoSuchAlgorithmException e) {
+        }
+        if (md5 != null) {
+            for (byte b : md5.digest()) {
+                sb.append(String.format("%02X", b));
+            }
+        }
+        return sb.toString();
     }
 }
