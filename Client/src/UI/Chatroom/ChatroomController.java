@@ -40,8 +40,8 @@ public class ChatroomController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        emojiBox.setVisible(true);
-        Hbox.setVisible(true);
+        emojiBox.setVisible(false);
+        Hbox.setVisible(false);
 
     }
 
@@ -124,8 +124,8 @@ public class ChatroomController implements Initializable {
 
             Text emoji = new Text(string[i]);
             Hbox.getChildren().add(emoji);
-            System.out.println(Hbox);
-            System.out.println(emojiBox);
+            //System.out.println(Hbox);
+            //System.out.println(emojiBox);
             emoji.setOnMouseClicked(e -> {textField.setText(textField.getText() + emoji.getText());});
 
             emojiBox.setVisible(true);

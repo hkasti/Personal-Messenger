@@ -59,6 +59,7 @@ public class SignUpController {
     public void setUser() throws IOException {
         //userSignU.accessibleTextProperty().setValue(scanner.nextLine());
         username = userSignU.getText();
+
     }
 
     public void setPass(){

@@ -27,12 +27,34 @@ public class ProfileController {
     public ImageView proPic;
     public void setName(){
           Name = name.getText();
+        if(Name==null || Name.matches("[ ]*") ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Please Don't Leave The Fields Empty");
+            alert.showAndWait();
+            Name = name.getText();
+
+        }
     }
     public void setUser(){
          User = user.getText();
+        if(User==null || User.matches("[ ]*") ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Please Don't Leave The Fields Empty");
+            alert.showAndWait();
+            User = user.getText();
+
+        }
     }
     public void setPass(){
          Pass = pass.getText();
+        if(Pass==null || Pass.matches("[ ]*") ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Please Don't Leave The Fields Empty");
+            alert.showAndWait();
+            Pass = pass.getText();
+
+        }
+
     }
     public void setPic(MouseEvent mouseEvent){
         try{
@@ -49,25 +71,27 @@ public class ProfileController {
         }
     }
     public void setFamilyName(){
-         FamilyName = setFamilyNameB.getText();
+         FamilyName = familyname.getText();
+        if(FamilyName==null || FamilyName.matches("[ ]*") ) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Please Don't Leave The Fields Empty");
+            alert.showAndWait();
+            FamilyName = familyname.getText();
+
+        }
     }
     public void setEmail(){
-         Email = setEmailB.getText();
-//        if(email.matches("/^[a-zA-Z0-9!#$&_*?^{}~-]+([a-zA-Z0-9!#$&_*?^{}~-]+)*@([a-z0-9]+/g([a-z0-9-]*))+[a-zA-Z]+$"))
-//        {
-//            email=setEmailB.getText();
-//        }
-//        else{
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setContentText("Invalid Email");
-//            alert.showAndWait();
-//
-//        }
-//        if(Email==null || Email.matches("[ ]*") ) {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setContentText("Please Don't Leave The Fields Empty");
-//            alert.showAndWait();
-//        }
+         Email = email.getText();
+        if(Email.matches("[a-zA-Z0-9]*@gmail.com"))
+        {
+            Email=setEmailB.getText();
+        }
+        else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Invalid Email");
+            alert.showAndWait();
+
+        }
 
 
           }
