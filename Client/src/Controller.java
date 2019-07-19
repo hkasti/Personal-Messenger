@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class Controller {
-    private static final String server_ip = "127.0.0.1";
+    private static final String server_ip = "127.01.01.01";
     private ControllerInterface stub;
     public String username;
 

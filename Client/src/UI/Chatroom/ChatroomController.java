@@ -85,9 +85,9 @@ public class ChatroomController implements Initializable {
         }
 
         //Text From Client:
-        //message.setTranslateX(220);
-        //message.setTextAlignment(TextAlignment.RIGHT);
-        //message.setFill(Color.BLACK);
+//        message.setTranslateX(220);
+//        message.setTextAlignment(TextAlignment.RIGHT);
+//        message.setFill(Color.BLACK);
 
         Vbox.getChildren().add(message);
     }
